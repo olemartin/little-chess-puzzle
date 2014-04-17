@@ -22,7 +22,7 @@ p {
     font-size:14px;
 }
 table {
-	border: 1px;
+	border: 1px solid #000000;
 }
 td {
     margin: 0;
