@@ -1,0 +1,18 @@
+{
+  "name": "chess-puzzle",
+  "version": "0.0.0",
+  "description": "A chess puzzle application for little printer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ole-Martin Mørk",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.0.0",
+    "request": "~2.34.0",
+    "assert": "~1.1.1",
+    "consolidate": "~0.10.0",
+    "handlebars": "~2.0.0-alpha.2"
+  }
+}

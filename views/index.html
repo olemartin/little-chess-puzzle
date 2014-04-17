@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<title>
+			Daily chess puzzle
+		</title>
+		<link rel="stylesheet" href="/index.css" type="text/css">
+		
+	</head>
+	<body>
+        <h3>Daily Chess puzzle</h3>
+        <p class="i">Powered by lichess.org</p>
+		<table class="chessboard" cellspacing="0" cellpadding="0">
+			{{#each board.board}}
+			<tr>
+				{{#each this}}
+					<td class="cell {{this.color}}">
+				    {{this.piece}}
+					</td>
+				  {{/each}}
+			</tr>
+			{{/each}}
+		</table>
+        <p>
+            <span class="bold">Solution:</span>&nbsp;
+            <span class="upsidedown">{{solution}}</span>
+        </p>
+        <div class="ruler">
+
+        </div>
+	</body>
+</html>
