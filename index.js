@@ -17,6 +17,15 @@ app.get('/edition', function(req, res) {
 	});
 });
 
+app.get('/sample', function(req, res) {
+    lichess.fetch(function(response) {
+        res.render('index', {
+            board: chessboard.generateBoard(response.position),
+            solution : response.solution
+        });
+    });
+});
+
 app.get('/', function(req, res) {
     res.redirect('/edition');
 })
