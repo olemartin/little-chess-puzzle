@@ -1,6 +1,6 @@
 body {
     margin:0px;
-    font-family:'Cabin';
+    font-family:'Verdana';
 }
 
 h2 {
@@ -58,6 +58,10 @@ div.ruler {
     width: 100%;
     min-height: 20px;
     margin: 10px 0;
+}
+
+.solution {
+    font-family: 'Arial';
 }
 
 .upsidedown
