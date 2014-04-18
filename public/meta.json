@@ -1,8 +1,8 @@
 {
   "owner_email": "chesspuzzles@ole-martin.net",
   "publication_api_version": "0.1",
-  "name": "Chess puzzles",
-  "description": "Chess Puzzles powered by lichess.org",
+  "name": "Daily Chess Puzzle",
+  "description": "Powered by lichess.org",
   "delivered_on": "every day",
   "external_configuration": false,
   "send_delivery_count": true
