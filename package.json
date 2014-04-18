@@ -13,6 +13,7 @@
     "request": "~2.34.0",
     "assert": "~1.1.1",
     "consolidate": "~0.10.0",
-    "handlebars": "~2.0.0-alpha.2"
+    "handlebars": "~2.0.0-alpha.2",
+    "etagify": "0.0.2"
   }
 }

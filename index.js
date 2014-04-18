@@ -7,10 +7,12 @@ app.engine('html', cons.handlebars);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+app.use(require('etagify')());
 
 
 var fetchData = function(req, res) {
     lichess.fetch(function(response) {
+        res.etagify();
         res.render('index', {
             board: chessboard.generateBoard(response.position),
             solution : response.solution
