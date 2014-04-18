@@ -8,16 +8,14 @@
 		
 	</head>
 	<body>
-        <h3>Daily Chess puzzle</h3>
+        <h2>Daily Chess puzzle</h2>
         <p class="i">Powered by lichess.org</p>
         <p>{{board.playing}} to move</p>
 		<table class="chessboard" cellspacing="0" cellpadding="0">
 			{{#each board.board}}
 			<tr>
 				{{#each this}}
-					<td class="cell {{this.color}}">
-				    {{this.piece}}
-					</td>
+					<td class="cell {{this.color}}"><img src="http://chesspuzzles.herokuapp.com/pieces/{{this.piece}}.png"/></td>
 				  {{/each}}
 			</tr>
 			{{/each}}
