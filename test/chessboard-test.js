@@ -1,20 +1,5 @@
 var assert = require("assert")
 var chessboard = require("../lib/chessboard.js")
-var piecesUnicode = {
-    'K': '♔', // U+2654
-    'Q': '♕', // U+2655
-    'R': '♖', // U+2656
-    'B': '♗', // U+2657
-    'N': '♘', // U+2658
-    'P': '♙', // U+2659
-
-    'k': '♚', //U+265A
-    'q': '♛', //U+265B
-    'r': '♜', // U+265C
-    'b': '♝', // U+265D
-    'n': '♞', // U+265E
-    'p': '♟'
-};
 
 describe('Chessboard', function() {
 	describe('generateBoard', function() {
@@ -25,12 +10,15 @@ describe('Chessboard', function() {
 		
 		it('should have first line correct', function() {
 			var arr = chessboard.generateBoard("r2qk1nr/ppp2ppp/2p5/2b1p3/4PP2/5b1P/PPPP2P1/RNBQK2R");
-			assert.deepEqual(['♜', ' ', ' ', '♛', '♚',' ', '♞', '♜'], arr.board[0]);
+
+			assert.deepEqual([{piece:'bR',color:'w'}, {piece:'blank',color:'b'},{piece:'blank',color:'w'},{piece:'bQ',color:'b'},
+                {piece:'bK',color:'w'},{piece:'blank',color:'b'},{piece:'bK',color:'w'},{piece:'bR',color:'b'}], arr.board[0]);
 		});
 		
 		it('should have second line correct', function() {
 			var arr = chessboard.generateBoard("r2qk1nr/ppp2ppp/2p5/2b1p3/4PP2/5b1P/PPPP2P1/RNBQK2R");
-			assert.deepEqual(['♟','♟','♟', ' ', ' ','♟','♟','♟'], arr.board[1]);
+			assert.deepEqual([{piece:'bP',color:'b'},{piece:'bP',color:'w'},{piece:'bP',color:'b'},{piece:'blank',color:'w'},
+                {piece:'blank',color:'b'},{piece:'bP',color:'w'},{piece:'bP',color:'b'},{piece:'bP',color:'w'}], arr.board[1]);
 		});
 		
 		it('should have eight lines', function() {
