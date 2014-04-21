@@ -11,9 +11,9 @@ app.use(require('etagify')());
 
 function coordinates(aimove) {
     var startX = 48 * (aimove.charCodeAt(0) - 96) - 24;
-    var startY = 384 - (48 * parseInt(aimove.charAt(1)) - 44);
+    var startY = 384 - (48 * parseInt(aimove.charAt(1)) - 24);
     var stopX = 48 * (aimove.charCodeAt(2) - 96) - 24;
-    var stopY = 384 - (48 * parseInt(aimove.charAt(3)) - 44);
+    var stopY = 384 - (48 * parseInt(aimove.charAt(3)) - 24);
     return [startX, startY, stopX, stopY];
 }
 
