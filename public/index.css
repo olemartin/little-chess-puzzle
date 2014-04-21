@@ -66,6 +66,11 @@ div.ruler {
     margin: 10px 0;
 }
 
+svg {
+	position:absolute;
+	top: 158px;
+}
+
 .solution {
     font-family: 'Arial';
 }

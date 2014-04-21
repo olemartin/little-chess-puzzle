@@ -9,11 +9,25 @@ app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 app.use(require('etagify')());
 
+function coordinates(aimove) {
+    var startX = 48 * (aimove.charCodeAt(0) - 96) - 24;
+    var startY = 384 - (48 * parseInt(aimove.charAt(1)) - 24);
+    var stopX = 48 * (aimove.charCodeAt(2) - 96) - 24;
+    var stopY = 384 - (48 * parseInt(aimove.charAt(3)) - 24);
+    return [startX, startY, stopX, stopY];
+}
+
+
 var render = function (res, response) {
     res.etagify();
+    var solution = response.solution.slice(1).join(", ");
     res.render('index', {
         board: chessboard.generateBoard(response.position),
-        solution: response.solution
+        solution: solution,
+		aimove: coordinates(response.solution[0]),
+		url : response.url,
+		color: response.color,
+		rating: response.rating
     });
 };
 
