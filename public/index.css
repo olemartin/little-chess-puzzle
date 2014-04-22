@@ -45,7 +45,6 @@ tr {
 
 td.b {
     background-image: url("dither.png");
-
 }
 
 td.w {
@@ -58,12 +57,20 @@ img {
     height: 48px;
 }
 div.ruler {
-    background-color: black;
     color:white;
     text-align: center;
     width: 100%;
     min-height: 20px;
     margin: 10px 0;
+}
+
+div.ruler.black {
+	background-color: #000;
+}
+
+div.ruler.dither {
+	background-image: url("dither.png");
+	    min-height: 10px;
 }
 
 svg {
@@ -72,6 +79,11 @@ svg {
 }
 
 .solution {
+    font-family: 'Arial';
+	padding-bottom: 10px;
+}
+
+.heading {
     font-family: 'Arial';
 }
 
