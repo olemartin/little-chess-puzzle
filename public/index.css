@@ -68,9 +68,14 @@ div.ruler.black {
     background-color: #000;
 }
 
+div.ruler.small {
+    background-color: #000;
+	min-height: 5px;
+}
+
 div.ruler.dither {
     background-image: url("dither.png");
-        min-height: 10px;
+    min-height: 10px;
 }
 
 svg {
