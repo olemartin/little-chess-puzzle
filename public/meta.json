@@ -5,6 +5,6 @@
   "description": "Get an exciting chess puzzle delivered every day. Based on real games played at lichess.org. Made by twitter.com/olemartin",
   "delivered_on": "every day",
   "external_configuration": false,
-  "send_delivery_count": true
+  "send_delivery_count": false
 }
 
